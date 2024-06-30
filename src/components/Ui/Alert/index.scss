@@ -24,7 +24,7 @@ $successColor: #7acf58d6;
 $successBorder: rgba(0, 255, 0, 0.322);
 
 @mixin alert($name, $bgColor, $color, $borderColor) {
-  .#{name} {
+  .#{$name} {
     padding: 20px;
     color: $color;
     border-radius: 10px;
@@ -56,3 +56,4 @@ $successBorder: rgba(0, 255, 0, 0.322);
 @include alert("alert-warning", $warningBg, $warningColor, $warningBorder);
 @include alert("alert-error", $errorBg, $errorColor, $errorBorder);
 @include alert("alert-success", $successBg, $successColor, $successBorder);
+

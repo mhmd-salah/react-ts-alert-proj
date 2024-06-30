@@ -1,11 +1,11 @@
 import {  X } from "lucide-react";
-import "./index.scss";
+import "./index.scss"
 import { FC, ReactNode } from "react";
 interface Iprops {
   type: string;
   icon:ReactNode;
   title:string;
-  description:string
+  description?:string
 }
 const Alert: FC<Iprops> = ({ type ,icon,title,description}) => {
   return (
