@@ -1,13 +1,9 @@
 import {  X } from "lucide-react";
 import "./index.scss"
-import { FC, ReactNode } from "react";
-interface Iprops {
-  type: string;
-  icon:ReactNode;
-  title:string;
-  description?:string
-}
-const Alert: FC<Iprops> = ({ type ,icon,title,description}) => {
+import { FC } from "react";
+import { Iprops } from "../../../types";
+
+const Alert: FC<Iprops> = ({ type ,icon,title,description,children}) => {
   return (
     <div className={type}>
       <div className="alert-header">
@@ -21,7 +17,7 @@ const Alert: FC<Iprops> = ({ type ,icon,title,description}) => {
         </span>
       </div>
       <p>
-        {description}
+        {children?children:<p>{description}</p>}
       </p>
     </div>
   );
